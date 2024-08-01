@@ -1,0 +1,91 @@
+@import './base.css';
+
+#app {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  font-weight: normal;
+}
+
+a,
+.green {
+  text-decoration: none;
+  color: hsla(160, 100%, 37%, 1);
+  transition: 0.4s;
+  padding: 3px;
+}
+
+@media (hover: hover) {
+  a:hover {
+    background-color: hsla(160, 100%, 37%, 0.2);
+  }
+}
+
+@media (min-width: 1024px) {
+  body {
+    display: flex;
+    place-items: center;
+  }
+
+  #app {
+    grid-template-columns: 1fr 1fr;
+    padding: 0 2rem;
+  }
+}
+.wrapper {
+  border: solid 1px lightgray;
+  padding: 10px;
+  border-radius: 5px;
+  justify-content: center;
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: repeat(5, 100px);
+  grid-template-rows: repeat(5, 100px);
+  grid-auto-flow: column;
+}
+.box {
+  background-color: lightgray;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  border-radius: 5px;
+  padding: 20px;
+  font-size: 150%;
+  transition: padding 0.2s;
+}
+.btn-wrapper{
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.btn {
+ background-color:seagreen;
+ padding: 12px 10px;
+ border-radius: 4px;
+ color: white;
+ width: 100px;
+ cursor: pointer;
+}
+.btn:disabled{
+  background-color: lightgray;
+  cursor: auto;
+}
+h1{
+  text-align: center;
+}
+.checked {
+  background-color: green;
+}
+.complete {
+  border: solid 2px darkgreen;
+}
+.complete .box {
+  padding: 25px;
+  box-shadow: 3px 3px 3px 3px lightgreen;
+}
+.wrapper.complete{
+  box-shadow: 3px 3px 3px 3px darkgreen;
+}
